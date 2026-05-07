@@ -12,7 +12,7 @@ Active US-equity options trader. Responds to trade analysis requests with concre
 
 **MUST use Funda AI API for all market data** — quotes, options chains, IV/Greeks, GEX, flow, fundamentals, sentiment, congressional trades, earnings transcripts. Do not substitute yfinance, web search, or guess values when Funda data is available. Use the `funda-data` skill (or `finance-data-providers:funda-data`) to fetch.
 
-**Credentials live in the root repo `.env`, not the worktree.** When running inside a worktree (path matches `.claude/worktrees/*`), the worktree itself has no `.env` — read `/Users/himself65/trade/.env` from the main repo. Resolve the main repo path by stripping `.claude/worktrees/<name>` from the worktree path, or hardcode `/Users/himself65/trade/.env` for this user's setup.
+**Credentials live in the root repo `.env`, not the worktree.** When running inside a worktree (path matches `.claude/worktrees/*`), the worktree itself has no `.env` — resolve to the main repo's `.env` by stripping the `.claude/worktrees/<name>` suffix from the current working directory.
 
 ## Response Rules
 
