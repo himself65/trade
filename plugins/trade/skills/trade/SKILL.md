@@ -1,10 +1,16 @@
 ---
 name: trade
-description: Personal US-equity options trading knowledge base. Use when the user asks for trade analysis, options strategy recommendations, earnings plays, post-mortems on prior trades, or mentions tickers in a trading context (e.g., "analyze APP", "should I sell put on TSLA", "what's the structure for NVDA earnings"). Triggers on mentions of multi-leg options (Jade Lizard, bull put spread, iron condor, diagonal, calendar), IV/IV crush, channel checks, earnings positioning, AH price action, or any single-stock options play. Provides concrete strikes, IV-aware structures, probability-weighted scenarios drawn from a curated library of 15 trading pitfalls and prior case studies (INTC, Mag-7, APP). Pulls market data via Funda AI API. Responds in Chinese with English technical terms.
-license: MIT
-metadata:
-  author: himself65
-  version: "1.0.0"
+description: >
+  Personal US-equity options trading knowledge base. Use when the user asks for
+  trade analysis, options strategy recommendations, earnings plays, post-mortems
+  on prior trades, or mentions tickers in a trading context (e.g., "analyze APP",
+  "should I sell put on TSLA", "what's the structure for NVDA earnings"). Triggers
+  on mentions of multi-leg options (Jade Lizard, bull put spread, iron condor,
+  diagonal, calendar), IV/IV crush, channel checks, earnings positioning, AH price
+  action, or any single-stock options play. Provides concrete strikes, IV-aware
+  structures, probability-weighted scenarios drawn from a curated library of 15
+  trading pitfalls and prior case studies (INTC, Mag-7, APP). Pulls market data
+  via Funda AI API. Responds in Chinese with English technical terms.
 ---
 
 # Trade — Options Trading Assistant
@@ -55,27 +61,31 @@ Active US-equity options trader's personal knowledge base. Concrete strikes, pro
 | Low IV + directional | Debit spread |
 | Front-week IV >> back-month | Diagonal / calendar |
 
-## Knowledge Base (Lazy Loaded)
+## Reference Files
 
-This skill uses a **tree structure** to keep the entry point small. Read individual files only when relevant — do not preload everything.
+This skill uses lazy loading — read individual reference files only when relevant.
 
-- `strategies.md` — structure-to-regime matching, setup checklist, position management. Always relevant; load when planning a new trade.
-- `pitfalls/README.md` — index of 15 trading pitfalls with quick lookup by trade type. Read individual `pitfalls/NN-*.md` files only when a relevant trade situation arises.
-- `ticker/README.md` — index of closed trade case studies (INTC, Mag-7, APP). Read individual `ticker/<name>.md` files when the current setup pattern-matches a prior trade.
+| File | Description |
+|---|---|
+| `references/strategies.md` | Structure-to-regime matching, setup checklist, position management. Always relevant; load when planning a new trade. |
+| `references/pitfalls/README.md` | Index of 15 trading pitfalls with quick lookup by trade type. |
+| `references/pitfalls/NN-*.md` | Individual pitfall rules — load only when a relevant trade situation arises. |
+| `references/ticker/README.md` | Index of closed trade case studies (INTC, Mag-7, APP). |
+| `references/ticker/<name>.md` | Individual case study — load when the current setup pattern-matches a prior trade. |
 
 ## When to Read Which File
 
 | Situation | Files to load |
 |-----------|---------------|
-| New trade analysis request | `strategies.md` |
-| Earnings play | `pitfalls/05`, `07`, `09`, `10`, `11` |
-| Channel-check-driven thesis | `pitfalls/14` |
-| High-vol single name (APP/MSTR/COIN/PLTR) | `pitfalls/12`, `13`, `15`; `ticker/app-2026-05.md` |
-| Sell-the-news fade attempt | `pitfalls/01`, `02`, `03`, `04`; `ticker/intc-2026-04.md` |
-| Multi-name cluster earnings | `pitfalls/09`, `10`, `11`; `ticker/mag7-2026-q1.md` |
+| New trade analysis request | `references/strategies.md` |
+| Earnings play | `references/pitfalls/05`, `07`, `09`, `10`, `11` |
+| Channel-check-driven thesis | `references/pitfalls/14` |
+| High-vol single name (APP/MSTR/COIN/PLTR) | `references/pitfalls/12`, `13`, `15`; `references/ticker/app-2026-05.md` |
+| Sell-the-news fade attempt | `references/pitfalls/01`, `02`, `03`, `04`; `references/ticker/intc-2026-04.md` |
+| Multi-name cluster earnings | `references/pitfalls/09`, `10`, `11`; `references/ticker/mag7-2026-q1.md` |
 
 ## Adding to the Knowledge Base
 
-- **New pitfall**: copy `pitfalls/_template.md` → `pitfalls/NN-slug.md`, add row to `pitfalls/README.md` table
-- **New case study**: copy `ticker/_template.md` → `ticker/<ticker>-YYYY-MM.md`, add row to `ticker/README.md` table
-- **Strategy update**: edit `strategies.md` directly — it stays flat because it's always-relevant framework
+- **New pitfall**: copy `references/pitfalls/_template.md` → `references/pitfalls/NN-slug.md`, add row to `references/pitfalls/README.md` table
+- **New case study**: copy `references/ticker/_template.md` → `references/ticker/<ticker>-YYYY-MM.md`, add row to `references/ticker/README.md` table
+- **Strategy update**: edit `references/strategies.md` directly — it stays flat because it's always-relevant framework
