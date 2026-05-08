@@ -42,13 +42,27 @@ Active US-equity options trader. Responds to trade analysis requests with concre
 | High IV + bullish | Bull put spread |
 | High IV + bearish | Bear call spread |
 | High IV + neutral | Iron condor |
+| High IV + manipulator-tape | Jade Lizard + leveraged-proxy scalp |
 | Low IV + directional | Debit spread |
 | Front-week IV >> back-month | Diagonal / calendar |
 
 ## Knowledge Base
 
-@pitfalls.md — 15 analytical biases to avoid, with the reasoning behind each
-@strategies.md — structure-to-regime matching, setup checklist, position management
-@intc.md — INTC Apr 2026 earnings trade arc (bear → diagonal → bull put flip, +$3.78 swing from flip)
-@mag7_q1_2026.md — Mag-7 Q1 2026 cluster framework notes. Three different IV/duration regimes matched to three structures. Lessons: T+1 reverse drift, LEAPS vega tax, buy-side report → market bar inflation, sector mood vs individual merits.
-@app.md — APP May 2026 earnings trade arc (Jade Lizard + Call Spread + APPX scalping). Lessons: manipulator-tape recognition, take-profit discipline > target obsession, single channel-check sample bias, AH order-book fade signal.
+The repo uses a **tree structure** to keep this entry point small. Read individual files only when relevant — do not preload everything.
+
+@strategies.md — structure-to-regime matching, setup checklist, position management. Always relevant; load when planning a new trade.
+
+@pitfalls/README.md — index of 15 trading pitfalls. Read individual `pitfalls/NN-*.md` files only when the relevant trade type comes up. Quick lookup by trade type provided in the index.
+
+@ticker/README.md — index of closed trade case studies (INTC, Mag-7, APP). Read individual `ticker/<name>.md` files when the current setup pattern-matches a prior trade.
+
+## When to Read Which File
+
+| Situation | Files to load |
+|-----------|---------------|
+| New trade analysis request | `strategies.md` |
+| Earnings play | `pitfalls/05`, `07`, `09`, `10`, `11` |
+| Channel-check-driven thesis | `pitfalls/14` |
+| High-vol single name (APP/MSTR/COIN/PLTR) | `pitfalls/12`, `13`, `15`; `ticker/app-2026-05.md` |
+| Sell-the-news fade attempt | `pitfalls/01`, `02`, `03`, `04`; `ticker/intc-2026-04.md` |
+| Multi-name cluster earnings | `pitfalls/09`, `10`, `11`; `ticker/mag7-2026-q1.md` |
