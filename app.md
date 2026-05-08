@@ -1,6 +1,6 @@
 # APP Earnings Trade Case Study (May 2026)
 
-Real trade arc around AppLovin Q1 2026 earnings (released May 6 AMC), spanning 12 days from Apr 24 channel-check thesis to post-earnings AH scalping. Net result: **profitable**, but the *key lesson is structural, not directional* — APP behaves like a heavily-manipulated tape ("庄家" stock) where premium-selling outperforms directional buying.
+Real trade arc around AppLovin Q1 2026 earnings (released May 6 AMC), spanning 12 days from Apr 24 channel-check thesis to post-earnings AH scalping. Net result: **profitable**, but the *key lesson is structural, not directional* — APP behaves like a heavily-manipulated tape where premium-selling outperforms directional buying.
 
 ---
 
