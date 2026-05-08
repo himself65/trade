@@ -1,0 +1,226 @@
+# APP Earnings Trade Case Study (May 2026)
+
+Real trade arc around AppLovin Q1 2026 earnings (released May 6 AMC), spanning 12 days from Apr 24 channel-check thesis to post-earnings AH scalping. Net result: **profitable**, but the *key lesson is structural, not directional* — APP behaves like a heavily-manipulated tape ("庄家" stock) where premium-selling outperforms directional buying.
+
+---
+
+## Setup
+
+- **Ticker**: APP (AppLovin)
+- **Entry window**: Apr 24 — May 6
+- **Earnings**: May 6 (Tuesday) AMC
+- **Starting context**:
+  - Stock $436 after 2-day -11% selloff (Apr 23–24)
+  - 41% off 52W high $746
+  - At 50-day SMA $433, well below 200-day SMA $522
+  - IV Rank 1Y ~57%, HV ~90% (extremely elevated)
+  - Notion research: April CP channel check showed an agency's own APP spend **+19% QoQ Q4→Q1** vs management guide of **+5–7% QoQ**
+  - Sell-side: 38 analysts, consensus PT $615 (+41% from $436)
+  - Unity D28 (Vector) trailing APP D28 by ~20% per Chinese gaming publishers' channel checks
+
+---
+
+## Strategy Evolution
+
+### Stage 1: Initial bull thesis (Apr 24, $436)
+
+**Thesis**: Channel checks (+19% QoQ at agency level) imply APP will materially beat management's +5–7% QoQ guide. Stock at 50-day SMA = entry zone. IV Rank 57% = sell premium with upside leg.
+
+**Initial structure** (recommended, not yet executed):
+- 5/22 $440/$490 Call Debit Spread
+- 5/22 $420/$400 Bull Put Credit Spread
+- 6M target: $565
+
+**Flaw in hindsight**: The +19% QoQ from a single agency was extrapolated to APP overall. Sample bias — agencies with the most aggressive ad spend tend to be the ones willing to take channel-check calls.
+
+---
+
+### Stage 2: Stock ran ahead of plan (May 4, $475)
+
+**Trigger**: Stock rallied **$436 → $475 (+8.9%) in 9 trading days**, capturing most of the move *before* earnings. IV Rank dropped 57% → 50%.
+
+**New structure** (Jade Lizard, executed):
+- Sell 5/15 $440P @ ~$19.65
+- Sell 5/15 $480C @ ~$33.10
+- Buy  5/15 $510C @ ~$22.00
+- Net Credit ~$30.75, Call spread width $30 → **upside risk fully neutralized**
+- Plus: 6/18 $500/$560 Call Debit Spread for trend continuation
+
+**Why Jade Lizard, not Call Debit Spread**:
+- Most of the directional alpha already captured in run-up
+- Earnings IV at 150% on 5/8 weeklies → IV crush trade > delta trade
+- Credit ≥ width = upside zero-loss
+- $440 = put OI wall + 50-day SMA = real support
+
+---
+
+### Stage 3: Earnings print (May 6 AMC)
+
+**Reported**:
+- Revenue $1,842M (+59% YoY) — beat high-end guide $1,775M by **3.8%**
+- Adj EBITDA $1,557M, **85% margin** (vs guided 84%)
+- FCF $1.3B, Net Income $1,206M (+109% YoY)
+- **Buyback $1.0B in Q1** (vs Q4 $482M — pace doubled)
+- Q2 guide $1,915–1,945M (+4–6% QoQ, midpoint $1,930M)
+
+**Vs. expectations**:
+| Metric | Actual | Buyside Bogey | Result |
+|---|---|---|---|
+| Q1 Revenue | $1,842M | $1,860M | -1% miss |
+| Q1 EBITDA margin | 85% | 84% | beat |
+| Q2 Guide midpoint | $1,930M | $1,950–1,970M | **miss 1–2%** |
+| Beat % vs guide | 3.8% | typical 4–5% | **lowest in 5Q** |
+
+**Stock reaction**:
+- Closed -1.94% at $469 (pre-print fade)
+- AH initial spike to $480 (+2.4%) on numbers + buyback
+- AH peak $483.5 (+3.1%)
+- AH peak intraday print **~$500** during initial digestion (extreme thin-book candle)
+- Dipped to $476–478 during call as Adam repeated "won't break out e-commerce" — same script as 2/11 call
+
+---
+
+### Stage 4: User's actual execution (the real trade)
+
+| Action | Trigger | Outcome |
+|---|---|---|
+| **Closed Jade Lizard short legs at +50%** | Post-print, IV crushed | Locked half max profit before tail risk |
+| **Sold Call Spread at AH high $500** | Print spike | Captured peak credit |
+| **Sold all APPX at $490** | Used $510 estimate as TP, exited at $490 | **Conservative — +TP discipline** |
+| **Bought APPX back on dip** | Mean reversion | Round-tripped |
+| **Repeated 3 times** | Pump-dump pattern | Multiple scalps |
+
+**APPX = Defiance Daily Target 2X Long APP** — leveraged proxy. 2x daily exposure means each scalp captures ~2x of the underlying move minus daily decay.
+
+**Net result**: Profitable. Original Jade Lizard locked premium. Call spread sold at peak. APPX scalps farmed the manipulator-driven oscillation.
+
+---
+
+## What Worked
+
+### 1. Jade Lizard structure was correct for the regime
+- IV Rank 50%+, earnings IV 150% → premium-selling regime
+- Closing short legs at +50% is the standard mechanical rule for short-premium structures (Tasty Trade rule of thumb)
+- User correctly **did not wait for max profit** — locked half, freed capital
+
+### 2. Selling at AH peak instead of holding
+- Heavy thin-book AH spike to $500 was unsustainable
+- Selling Call Spread at the wick captured "manipulator pump" premium
+- **Lesson**: AH liquidity is thin → 1×7 or 30×310 order book ratios are reliable signals to fade extremes
+
+### 3. Using the $510 target as a *take-profit ceiling*, not a *certainty*
+- I quoted $510 as the 6M weighted target
+- User exited APPX at $490 — **better discipline than my own number suggested**
+- Don't wait to be perfectly right; cash the asymmetry while it's there
+
+### 4. The manipulator-aware strategy
+- User's read: **APP has heavy market-maker pump-dump pattern**
+- Confirmation: 5min candles showed repeated $5–10 wicks on thin AH volume
+- Selling premium **monetizes the noise** instead of fighting it
+- Scalping the leveraged proxy (APPX) on the oscillation is a separate, complementary trade
+
+---
+
+## What I Got Wrong (Analyst Side)
+
+### 1. Over-weighted single agency channel-check (+19% QoQ)
+- Reality was +11% QoQ
+- Agency was a self-selected aggressive spender, not market average
+- **Fix**: Weight any single channel-check at <50%; require 2-3 independent sources to lift base case
+
+### 2. Initially anchored 6M target at $565
+- Had to revise to $510 after Q2 guide
+- Q2 guide miss vs. buyside Bogey was the actual market input that mattered
+- **Fix**: For high-IV-rank earnings names, base 6M target on **post-print buyside reaction**, not pre-print buyside Bogey
+
+### 3. Dismissed cannibalization risk too quickly
+- April channel check actually flagged it: "non-gaming growth partially cannibalizes gaming"
+- I treated it as a footnote; market treated it as a real concern post-print
+- **Fix**: Cannibalization risks compound over time — never dismiss in a multi-product platform
+
+### 4. Underestimated how mechanical the AH dip would be
+- Predicted Adam's "won't break out e-commerce" line *would* cause a dip
+- But I framed it as "algo-mechanical, ignore" — user actually used the dip to scalp APPX
+- **Fix**: When you predict a mechanical dip, **plan a trade for it**, don't just predict it
+
+---
+
+## Lessons / Updates to Framework
+
+### ⭐ New rule: "Manipulator-tape" recognition
+APP shows the textbook signature of a heavily-manipulated tape:
+- Frequent ±3% intraday swings without news
+- AH wicks of $10–20 on thin liquidity
+- Programmatic algo selling on specific keywords (e.g., "won't break out", "show me")
+- Price reverts to intraday VWAP within 1–2 sessions
+
+**For these names**: Premium-selling + scalping the oscillation > directional buying.
+
+Tickers in this category (initial list): APP, MSTR, COIN, PLTR, DJT, TSLA (occasionally).
+
+### ⭐ AH order-book lopsidedness is a real signal
+- 1×7, 30×310 bid/ask size ratios = nearly free fade signal at extremes
+- Especially valid 30+ minutes after a print when retail is asleep
+- **Use as scalp entry**, not as a position trade
+
+### ⭐ Take-profit discipline > target-price obsession
+- User exited APPX at $490 vs my $510 target
+- The marginal $20 wasn't worth the hold-time risk in a pump-dump tape
+- Rule: **In manipulator names, take 60–70% of expected move and book it**
+
+### ⭐ Jade Lizard close-rule
+- Close short legs at +50% of max credit
+- Do NOT hold to expiration on event-driven Jade Lizards
+- The last 50% of premium has terrible risk/reward
+
+---
+
+## Reusable Framework: APP-Style Earnings Plays
+
+For future similar setups (high-IV-rank, beloved name, channel-check edge, AH-volatile):
+
+### Pre-earnings (T-7 to T-2)
+1. **Verify channel check via 2+ independent sources** before sizing up
+2. **Build position when IV Rank > 50% AND stock at technical support**
+3. **Default structure**: Jade Lizard with put strike at OI wall, call spread credit ≥ call spread width
+
+### Earnings day (T-0)
+4. **Don't add exposure intraday on earnings day** — IV peaked
+5. **Stand aside or already positioned**
+
+### After-hours (T-0 PM)
+6. **Watch first 30 min of AH** — first candles are noise
+7. **Fade extreme thin-book AH wicks** if order book ratio > 5:1
+8. **Close short legs at +50% of credit** during AH or T+1 morning
+
+### T+1 (day after earnings)
+9. **IV crushed → re-evaluate** — maybe new structure is cheaper
+10. **If thesis intact and stock pulled back**: bull put spread or scalp leveraged proxy
+11. **Don't chase** if stock gapped above your call spread
+
+### T+2 to T+7
+12. **Mean-revert scalps** in manipulator tapes — multiple round trips possible
+13. **Book each scalp at 60–70% of expected move**, don't wait for full target
+
+---
+
+## Numbers
+
+- **Capital efficiency**: Jade Lizard occupied ~$3,000 margin/contract for ~9 days, captured ~$22-25 of the $30.75 max credit = **~70% of theoretical max** in real conditions
+- **Call spread sold at peak**: Captured roughly the top 15% of AH range
+- **APPX scalps**: 3 round trips with 2x leverage on ~3% oscillations = ~6% per trip × 3 = ~18% gross before fees/slippage on that capital portion
+- **Net trade summary**: All four legs profitable, biggest contributor was Jade Lizard's IV crush
+
+---
+
+## Compared to Plan
+
+| Element | Planned | Actual | Verdict |
+|---|---|---|---|
+| Jade Lizard exit | "Hold to 5/15 expiry" | "Close short legs at +50%" | ✅ User better |
+| 6M target | $565 → revised $510 | n/a (didn't hold to test) | n/a |
+| APPX scalping | Not in plan | 3 round trips | ✅ User initiative |
+| Call Spread at AH high | Not in plan | Sold at $500 spike | ✅ User initiative |
+| Hedge with $440P | In plan | Skipped (correctly) | ✅ Skipping was right |
+
+**Net**: User executed the *correct* version of the plan I should have written.

@@ -1,6 +1,6 @@
 # Trading Analysis Pitfalls
 
-11 analytical biases to avoid when evaluating directional/options trades. Derived from real trade experience.
+15 analytical biases to avoid when evaluating directional/options trades. Derived from real trade experience.
 
 ---
 
@@ -145,3 +145,60 @@
   4. Accept the bleed and reduce sizing.
 - Never hold LEAPS through earnings without consciously choosing one of these.
 - Sector mood + capex panic can compound vega tax with delta loss → catastrophic LEAPS days exist.
+
+---
+
+## 12. Recognize "manipulator-tape" names — sell premium, don't buy direction
+
+**Rule**: Some high-IV names trade with heavy market-maker / large-trader pump-dump patterns. Frequent ±3% intraday swings without news, $10–20 AH wicks on thin liquidity, and programmatic algo selling on specific keywords. **For these names, premium-selling and oscillation-scalping outperform directional buying.**
+
+**Why it matters**: A correct directional thesis can still lose money in a manipulator tape because the price oscillates faster than your conviction window. Buying calls in these names is paying for vol that will be harvested by the next pump-dump cycle.
+
+**How to apply**:
+- Tickers that fit the pattern (initial list, expand over time): APP, MSTR, COIN, PLTR, DJT, TSLA (occasional)
+- Default structure: Jade Lizard / Iron Condor / Bull Put Spread (sell premium)
+- Pair with: scalp leveraged proxy (APPX for APP, MSTU for MSTR, etc.) on the oscillation
+- **Avoid**: Long-dated call buying — vol will be harvested out from under you
+
+---
+
+## 13. Take-profit discipline beats target-price obsession (in volatile tapes)
+
+**Rule**: In manipulator/high-vol names, **book 60–70% of expected move** rather than waiting for full target. The marginal last 30% of expected move is rarely worth the hold-time risk.
+
+**Why it matters**: APP case (May 2026): I quoted $510 6M target. User exited APPX at $490 — left ~$20 on the table but avoided 3+ days of pump-dump risk. Each subsequent round-trip earned more than the marginal $20 would have.
+
+**How to apply**:
+- For trades held days-to-weeks: book at 60–70% of expected move
+- For credit spreads / Jade Lizards: close short legs at +50% of max credit (mechanical Tasty rule)
+- For long premium: scale out — 1/3 at +50%, 1/3 at +100%, 1/3 trail with stop
+- Never wait for theoretical max profit on event-driven structures
+
+---
+
+## 14. Single channel-check is a sample, not a population
+
+**Rule**: One agency / one customer / one expert call is **n=1**. Aggressive growth signals from a single source are usually self-selection — agencies willing to take channel-check calls tend to be the ones with the most aggressive spending.
+
+**Why it matters**: APP case — agency reported +19% QoQ Q4→Q1 spending; I extrapolated to APP-wide trend. Reality was +11% QoQ. The agency was a top-quartile spender, not a market average.
+
+**How to apply**:
+- Discount any single channel-check by 30–40% before using it as a base case
+- Require **2–3 independent sources** before lifting the base case
+- Look for confirming sources from *different demand profiles* (large advertiser + small advertiser + agency, not 3 agencies)
+- Never let a single call swing your beat estimate by more than 1pp
+
+---
+
+## 15. AH order-book lopsidedness is a fade signal at extremes
+
+**Rule**: When AH bid/ask size ratio exceeds 5:1 in either direction at a price extreme (within 1% of AH high or low), the move is being driven by thin liquidity and is highly likely to revert.
+
+**Why it matters**: APP case — AH peak $483.5 had ask size 310 vs bid size 30 (10:1). Reverted to $476 within 40 minutes. Selling Call Spread or shorting leveraged proxy at the lopsided extreme captures this reversion.
+
+**How to apply**:
+- Check bid/ask size ratio at AH extremes
+- 5:1 ask-heavy at AH high → fade with short call spread or leveraged-proxy short
+- 5:1 bid-heavy at AH low → fade with bull put spread or leveraged-proxy long
+- Best between 18:00–20:00 ET (book is real but retail asleep — good signal-to-noise)
+- **Not a position trade** — book within 30–60 minutes
