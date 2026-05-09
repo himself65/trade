@@ -10,26 +10,26 @@ A personal Claude Code plugin marketplace housing one options-trading skill — 
 ### Claude Code — Install the plugin
 
 ```bash
-npx plugins add himself65/trade
+npx plugins add himself65/trade-skills
 ```
 
 ### Claude Code — Install just the skill
 
 ```bash
-npx skills add himself65/trade
+npx skills add himself65/trade-skills
 ```
 
 ### Other agents
 
 ```bash
-npx skills add himself65/trade -a <agent-name>
+npx skills add himself65/trade-skills -a <agent-name>
 ```
 
 ### Local development install (from a clone)
 
 ```bash
-git clone https://github.com/himself65/trade.git ~/trade
-ln -s ~/trade/plugins/trade/skills/trade ~/.claude/skills/trade
+git clone https://github.com/himself65/trade-skills.git ~/trade-skills
+ln -s ~/trade-skills/plugins/trade/skills/trade ~/.claude/skills/trade
 ```
 
 ## Available Skills

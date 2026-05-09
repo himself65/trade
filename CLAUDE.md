@@ -68,7 +68,7 @@ Step-by-step instructions, structure-to-regime quick reference, and the lazy-loa
 Users install via:
 
 ```bash
-npx plugins add himself65/trade
+npx plugins add himself65/trade-skills
 ```
 
 When a skill is invoked as a plugin, it is namespaced as `<plugin-name>:<skill-name>` (e.g., `/trade:trade`).
