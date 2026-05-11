@@ -9,12 +9,16 @@ One file per closed trade arc. Designed for lazy loading — the index lists tic
 | INTC | Q1 2026 earnings | 2026-04-23 | profit (+$3.78 swing from flip) | Flip thesis when tape invalidates it | `intc-2026-04.md` |
 | MSFT/GOOGL/AMZN | Q1 2026 cluster | 2026-04-29 | net profit despite one losing leg | Multi-name diversification absorbs single-thesis failure; LEAPS vega tax is real | `mag7-2026-q1.md` |
 | APP | Q1 2026 earnings | 2026-05-06 | profit | Manipulator-tape → sell premium, scalp leveraged proxy, don't buy direction | `app-2026-05.md` |
+| NOK | Q1 2026 + post-ER re-rate | 2026-04-23 (in-progress) | profit (+100% on Jun-27 LEAPS, ongoing exposure) | Post-earnings momentum continuation beats intraday-fade pattern when fundamentals + sector + flow align; elevated IV without near-term event is demand-driven, not event-driven | `nok-2026-04.md` |
 
 ## Quick Lookup by Pattern
 
 - **Earnings flip (sell-the-news fail)**: `intc-2026-04.md`
 - **High-IV cluster + LEAPS exposure**: `mag7-2026-q1.md`
 - **Manipulator-tape + channel-check edge**: `app-2026-05.md`
+- **Post-earnings momentum + sector co-rally + demand-IV**: `nok-2026-04.md`
+- **Analyst error: gap-up fade misread / IV crush misread**: `nok-2026-04.md`
+- **KOL amplification / thematic re-rate**: `nok-2026-04.md`
 
 ## Adding a New Case Study
 

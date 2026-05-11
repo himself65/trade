@@ -9,12 +9,15 @@ description: >
   checks, earnings positioning, AH action, LEAPS / stock replacement, dealer
   GEX / gamma exposure / max pain / options chain analysis, or any single-stock
   options play. Provides concrete strikes, IV-aware structures, and probability
-  -weighted scenarios drawn from 18 trading pitfalls, a gamma framework, and
-  case studies (INTC, Mag-7, APP). Market data via TradingView + Funda AI.
+  -weighted scenarios drawn from 21 trading pitfalls, a gamma framework, and
+  case studies (INTC, Mag-7, APP, NOK). Market data via TradingView + Funda AI.
   Responds in Chinese with English technical terms. **Always sanity-check net
   vega sign before recommending a directional structure** — wrong vega (credit
   spread at low IVR, debit spread at high IVR) is a known failure mode; see
-  pitfall 19.
+  pitfall 19. **Always pull net options premium flow data + check the catalyst
+  clock BEFORE predicting "IV crush" or "T+1 fade"** — pattern recognition
+  without data check has produced specific documented errors; see pitfalls 20
+  and 21 plus the NOK 2026-04 case study.
 ---
 
 # Trade — Options Trading Assistant
@@ -83,15 +86,19 @@ This skill uses lazy loading — read individual reference files only when relev
 | Situation | Files to load |
 |-----------|---------------|
 | New trade analysis request | `references/strategies.md`; `references/pitfalls/19` (vega-axis sanity check) |
-| Earnings play | `references/pitfalls/05`, `07`, `09`, `10`, `11` |
+| Earnings play | `references/pitfalls/05`, `07`, `09`, `10`, `11`, `20`, `21` |
 | Channel-check-driven thesis | `references/pitfalls/14` |
 | High-vol single name (APP/MSTR/COIN/PLTR) | `references/pitfalls/12`, `13`, `15`; `references/ticker/app-2026-05.md` |
-| Sell-the-news fade attempt | `references/pitfalls/01`, `02`, `03`, `04`; `references/ticker/intc-2026-04.md` |
+| Sell-the-news fade attempt | `references/pitfalls/01`, `02`, `03`, `04`, `20`; `references/ticker/intc-2026-04.md`, `references/ticker/nok-2026-04.md` |
 | Multi-name cluster earnings | `references/pitfalls/09`, `10`, `11`; `references/ticker/mag7-2026-q1.md` |
-| LEAPS / stock-replacement thesis | `references/strategies.md` (LEAPS section); `references/pitfalls/11`, `16`, `18` |
-| Vol-mispricing / IV-thesis claim | `references/pitfalls/16`, `18` |
+| LEAPS / stock-replacement thesis | `references/strategies.md` (LEAPS section); `references/pitfalls/11`, `16`, `18`, `21` |
+| Vol-mispricing / IV-thesis claim | `references/pitfalls/16`, `18`, `21` |
 | Expiry-day / gamma squeeze / pinning | `references/gamma-framework.md`; `references/pitfalls/17` |
-| Dealer flow / options market structure question | `references/pitfalls/17`; `references/gamma-framework.md` |
+| Dealer flow / options market structure question | `references/pitfalls/17`, `21`; `references/gamma-framework.md` |
+| Post-earnings gap-up + intraday fade (consider holding vs reversal) | `references/pitfalls/20`, `10`; `references/ticker/nok-2026-04.md` |
+| High IV but no near-term event (>30 days to earnings) | `references/pitfalls/21`, `7`; `references/ticker/nok-2026-04.md` |
+| Thematic re-rate / sector co-rally / KOL-amplified setup | `references/pitfalls/20`, `21`; `references/ticker/nok-2026-04.md` |
+| About to call "IV crush coming" or "fade incoming" | **MANDATORY**: `references/pitfalls/20`, `21` — pull flow data + catalyst clock BEFORE publishing the prediction |
 
 ## Adding to the Knowledge Base
 
